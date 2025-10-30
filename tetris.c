@@ -148,7 +148,7 @@ int main() {
 
 // Implementações
 
-void inicializarFila(Fila *f) {
+void inicializarFila(Fila *f) {// funçao iniciar fila
     f->frente = 0;
     f->tras = -1;
     f->qtd = 0;
@@ -180,15 +180,15 @@ Peca desenfileirar(Fila *f) {
 
 Peca gerarPeca() {
     Peca p;
-    char tipos[] = {'I', 'O', 'T', 'L'};
+    char tipos[] = {'I', 'O', 'T', 'L'};// tipos de pecas
     p.nome = tipos[rand() % 4];
     p.id = contadorID++;
     return p;
 }
 
 void exibirFila(Fila *f) {
-    printf("Estado atual da fila: ");
-    if (filaVazia(f)) {
+    printf("Estado atual da fila: ");// exibe a fila atual
+    if (filaVazia(f)) {// verifica se está vazia
         printf("[vazia]\n");
         return;
     }
